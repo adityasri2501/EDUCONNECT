@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="profilrstyle.css">
+</head>
+<body>
+
+    <header>
+        <img src="educonnect-logo.jpg" alt="Logo">  <!-- Replace with your logo image -->
+        <h1>My Profile</h1>
+    </header>
+
+    <div class="container">
+        <div class="profile-pic-container">
+            <!-- Add disabled attribute initially -->
+            <img src="default_profile.png" alt="Profile Picture" class="profile-pic" id="profilePic" style="pointer-events: none;">
+            <input type="file" id="profilePicUpload" accept="image/*" class="hidden" disabled>
+        </div>
+
+        <!-- Add disabled attribute to form elements initially -->
+        <form id="profileForm">
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="dateOfBirth">Date of Birth:</label>
+                <input type="date" id="dateOfBirth" name="dateOfBirth" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" disabled>
+            </div>
+
+             <div class="form-group">
+                <label for="pronouns">Pronouns:</label>
+                <select id="pronouns" name="pronouns" disabled>
+                    <option value="she/her">She/Her</option>
+                    <option value="he/him">He/Him</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <input type="text" id="gender" name="gender" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="fatherName">Father's Name:</label>
+                <input type="text" id="fatherName" name="fatherName" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="motherName">Mother's Name:</label>
+                <input type="text" id="motherName" name="motherName" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="education">Education:</label>
+                <input type="text" id="education" name="education" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="collegeSchool">College/School Name:</label>
+                <input type="text" id="collegeSchool" name="collegeSchool" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="skills">Skills:</label>
+                <input type="text" id="skills" name="skills" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="about">About (Max 100 words):</label>
+                <textarea id="about" name="about" rows="4" maxlength="100" disabled></textarea>
+            </div>
+
+             <div class="form-group">
+                <label for="resume">Resume:</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" disabled>
+            </div>
+
+            <button type="button" id="saveButton" onclick="saveProfile()" disabled>Save</button>
+        </form>
+    </div>
+
+    <!-- Login/Signup Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">×</span>
+            <h2 id="modalTitle">Login</h2>
+            <p id="modalMessage" class="modal-message"></p> <!-- For error/success messages -->
+            <div class="form-group">
+                <label for="username">Username/Email:</label>
+                <input type="text" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+            </div>
+            <div class="modal-buttons">
+                 <button type="button" onclick="handleLogin()">Login</button>
+                 <button type="button" onclick="handleSignup()" class="secondary-button">Sign Up</button>
+            </div>
+             <p class="auth-note">Note: This is a demo. Use 'user' / 'pass' to login after signing up once.</p>
+        </div>
+    </div>
+    <div id="modalOverlay" class="modal-overlay"></div>
+    <!-- End Modal -->
+
+
+    <script src="profilescript.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YouTube History & Playlist</title>
+  <link rel="stylesheet" href="history.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" />
+</head>
+<body>
+  <div class="container fade-in">
+    <h1 class="slide-down">Watch History</h1>
+
+    <div class="navigation-buttons">
+        <a href="home.html" class="nav-button slide-right"><i class="fas fa-user"></i> Homepage</a>
+        <a href="game.html" class="nav-button slide-right"><i class="fas fa-gamepad"></i> Game Hub</a>
+      </div>
+      
+
+    <div class="history-item slide-left">
+      <img src="thumbnail1.jpg" alt="Video Thumbnail" />
+      <div class="video-details">
+        <h3>Video Title 1 - A Very Interesting Video</h3>
+        <p>Channel Name <span class="dot"></span> 1 week ago</p>
+        <p class="video-description">Brief description of the video with fascinating topics.</p>
+        <div class="video-options">
+          <button class="option-button"><i class="fas fa-clock"></i> Watch Later</button>
+          <button class="option-button"><i class="fas fa-list"></i> Add to Playlist</button>
+        </div>
+      </div>
+      <button class="remove-button"><i class="fas fa-times"></i> Remove</button>
+    </div>
+
+    <div class="history-item slide-left">
+      <img src="thumbnail2.jpg" alt="Video Thumbnail" />
+      <div class="video-details">
+        <h3>Video Title 2 - Another Great Video</h3>
+        <p>Channel Name <span class="dot"></span> 2 weeks ago</p>
+        <p class="video-description">Another description. Exciting content here.</p>
+        <div class="video-options">
+          <button class="option-button"><i class="fas fa-clock"></i> Watch Later</button>
+          <button class="option-button"><i class="fas fa-list"></i> Add to Playlist</button>
+        </div>
+      </div>
+      <button class="remove-button"><i class="fas fa-times"></i> Remove</button>
+    </div>
+
+    <h2 class="slide-down">Playlists</h2>
+
+    <div class="playlist-container">
+      <div class="playlist-item zoom-in">
+        <img src="playlist_thumbnail.jpg" alt="Playlist Thumbnail" />
+        <div class="playlist-details">
+          <h3>My Favorite Music</h3>
+          <p>10 videos</p>
+        </div>
+      </div>
+
+      <div class="playlist-item zoom-in">
+        <img src="playlist_thumbnail.jpg" alt="Playlist Thumbnail" />
+        <div class="playlist-details">
+          <h3>Coding Tutorials</h3>
+          <p>5 videos</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="history.js"></script>
+</body>
+</html>
